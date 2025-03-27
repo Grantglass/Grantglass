@@ -1,4 +1,5 @@
 name: Metrics
+
 on:
   # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
@@ -6,10 +7,23 @@ on:
   workflow_dispatch:
   # (optional) Run workflow when pushing on master/main
   push: {branches: ["master", "main"]}
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: Grantglass/metrics@master
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker.io jq build-essential libxml2-dev libxslt-dev
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run GitHub Metrics
+        uses: Grantglass/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
