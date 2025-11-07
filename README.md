@@ -1,4 +1,4 @@
 # GitHub Stats
 
-![Metrics](github-metrics.svg)
+![Metrics](github_metrics.svg)
 updated
