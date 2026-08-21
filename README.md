@@ -1,7 +1,7 @@
 <h1 align="center">Grant Glass, Ph.D.</h1>
 
 <p align="center">
-  <strong>Senior Applied &amp; Data Scientist @ NetApp</strong>&nbsp;·&nbsp;AI Governance &amp; Safety Educator&nbsp;·&nbsp;Researcher
+  <strong>Staff Applied &amp; Data Scientist @ NetApp</strong>&nbsp;·&nbsp;AI Governance &amp; Safety Educator&nbsp;·&nbsp;Researcher
 </p>
 
 <p align="center">
